@@ -45,8 +45,7 @@
                 localImag.style.height = "63px";  
                 try {  
                     localImag.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)",  
-                    localImag.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = img_txt
-                    parent.openPhoto(localImag);  
+                    localImag.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = img_txt  
                 } catch(f) {  
                     return alert("您上传的图片格式不正确，请重新选择！"),  
                     !1  
@@ -56,9 +55,7 @@
             }  
             return document.getElementById("DivUp").style.display = "block",  
             !0  
-        }
-        
-        	
+        }  
     </script>  
 </body>  
 </html>
