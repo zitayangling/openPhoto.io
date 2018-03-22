@@ -27,6 +27,7 @@ function addImage() {
         var w = image.naturalWidth,
             h = image.naturalHeight,
             quality = 0.2;
+        console.log("w,h="+w+","+h);    
         canvas.width = w/2;
         canvas.height = h/2;
         ctx.scale(0.5,0.5);
