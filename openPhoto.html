@@ -27,15 +27,10 @@ function addImage() {
         var w = image.naturalWidth,
             h = image.naturalHeight,
             quality = 0.2;
-            if(w >= 960 && w <= 1334){
-                w = w/2;
-            }else if (w>1334) {w=w/4}
-            if(h >= 640 && h <=750){
-                h = h/2;
-            }else if (h>750) {h=h/4}
-        canvas.width = w;
-        canvas.height = h;
-        ctx.drawImage(image, 0, 0, w, h, 0, 0, w, h);
+        canvas.width = w/2;
+        canvas.height = h/2;
+        ctx.scale(0.5,0.5);
+        ctx.drawImage(image, 0, 0);
         var dataUrl = canvas.toDataURL('image/jpeg', quality);//toDataURL方法需要在服务器下才能执行
         result_image.src = dataUrl;
     }
